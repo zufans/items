@@ -14,9 +14,7 @@
     "build-lib": "rollup -c",
     "git": "sh ./pushToGit.sh",
     "pub": "sh ./publish.sh",
-    "auto": "sh ./auto.sh",
-    "gitf": "sh ./gitFristCommit.sh"
-
+    "auto": "sh ./auto.sh"
   },
   "keywords": [
     "React",

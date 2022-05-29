@@ -1,2 +1,2 @@
-import Dropdown from "./dropdown";
-export default Dropdown
+import Items from "./items";
+export default Items

@@ -1,20 +1,20 @@
 import React from 'react';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Dropdown({
-  lable,
-  title
+function Items({
+  itemsProps
 }) {
-  return /*#__PURE__*/React.createElement(NavDropdown, {
-    title: title,
-    menuVariant: "dark"
-  }, lable.map((v, i) => {
-    return /*#__PURE__*/React.createElement(NavDropdown.Item, {
+  return /*#__PURE__*/React.createElement(Nav, null, itemsProps.map((v, i) => {
+    return /*#__PURE__*/React.createElement(Nav.Link, {
       key: i,
+      style: {
+        padding: 5
+      },
+      href: v.href,
       onClick: v.onClick
     }, v.lable);
   }));
 }
 
-export { Dropdown as default };
+export { Items as default };

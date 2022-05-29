@@ -1,27 +1,27 @@
 'use strict';
 
 var React = require('react');
-var NavDropdown = require('react-bootstrap/NavDropdown');
+var Nav = require('react-bootstrap/Nav');
 require('bootstrap/dist/css/bootstrap.min.css');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
-var NavDropdown__default = /*#__PURE__*/_interopDefaultLegacy(NavDropdown);
+var Nav__default = /*#__PURE__*/_interopDefaultLegacy(Nav);
 
-function Dropdown({
-  lable,
-  title
+function Items({
+  itemsProps
 }) {
-  return /*#__PURE__*/React__default["default"].createElement(NavDropdown__default["default"], {
-    title: title,
-    menuVariant: "dark"
-  }, lable.map((v, i) => {
-    return /*#__PURE__*/React__default["default"].createElement(NavDropdown__default["default"].Item, {
+  return /*#__PURE__*/React__default["default"].createElement(Nav__default["default"], null, itemsProps.map((v, i) => {
+    return /*#__PURE__*/React__default["default"].createElement(Nav__default["default"].Link, {
       key: i,
+      style: {
+        padding: 5
+      },
+      href: v.href,
       onClick: v.onClick
     }, v.lable);
   }));
 }
 
-module.exports = Dropdown;
+module.exports = Items;
